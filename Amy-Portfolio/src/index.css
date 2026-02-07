@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap');
+
+button {
+  font-family: 'Quicksand', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+
+:root {
+  font-size: 90%;
+
+  /* Fonts */
+  --font-h1: 'Playfair Display', serif;
+  --font-h2: 'Caveat Brush', cursive;
+  --font-body: 'Quicksand', sans-serif;
+
+  font-optical-sizing: auto;
+  font-style: normal;
+  overflow-x: hidden;
+
+  /* Color Palette - New Brand Direction */
+  --color-coral: #FF6648;
+  /* Primary coral (buttons, icons, accents) */
+  --color-peach: #FFE1D7;
+  /* Hero big text, highlight accent */
+  --color-cta-blue: #84AFFB;
+  /* CTA buttons */
+  --color-span-accent: #0259D0;
+  /* Deep blue accent for "Journey" */
+  --color-white: #FFFFFF;
+
+  /* Mapping to functional variables */
+  --bg-primary: #FFFFFF;
+  --text-header: var(--color-white);
+  /* Defaulting to white for dark/image bg contexts, specific sections might override */
+  --text-body: var(--color-white);
+
+  color: var(--text-body);
+}
+
+body {
+  margin: 0 auto;
+  font-family: var(--font-body);
+  /* Global Background Image on Body/Wrapper */
+  background-image: url('Images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Global Dark Overlay */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  /* 0.15-0.25 opacity overlay */
+  z-index: -1;
+  pointer-events: none;
+}
+
+h1 {
+  font-family: var(--font-h1);
+  color: var(--text-header);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  /* Subtle spacing */
+}
+
+h2 {
+  font-family: var(--font-h2);
+  color: var(--text-header);
+  font-weight: 400;
+  /* Caveat Brush is usually 400 */
+  letter-spacing: 0.02em;
+}
+
+p,
+a,
+span,
+button,
+input {
+  font-family: var(--font-body);
+  color: var(--text-body);
+  line-height: 1.6;
+}
+
+.app {
+  /* Removed bg image from here as it's on body now, or keep if wrapper needs it */
+  color: var(--text-body);
+  display: flex;
+  flex-direction: column;
+  /* Stack structure instead of grid for full widths */
+
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0 auto;
+  position: relative;
+  overflow-x: hidden;
+}
+
+
+.app .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.app .main {
+  width: 100%;
+}
+
+.app .footer {
+  width: 100%;
+}
+
+
+.app .activeSection {
+  display: block;
+}
+
+.app .notActiveSection {
+  display: none;
+}
+
+
+
+
+
+
+@media (max-width: 767px) {
+
+  :root {
+    font-size: 80%;
+  }
+
+  .app {
+    grid-template-columns: minmax(100%, 1fr);
+    max-width: 100%;
+
+
+  }
+
+}

@@ -1,0 +1,275 @@
+/* About.module.css */
+
+.aboutSection {
+    width: 100%;
+    min-height: 100vh;
+    padding: 6rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Global bg shows through behind the panel */
+}
+
+.coralPanel {
+    background-color: var(--color-coral);
+    /* #FF6648 */
+    width: 100%;
+    max-width: 1250px;
+    padding: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    position: relative;
+    /* Plain rectangle per "It’s a rectangle card/panel" */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Left Column - Content */
+.leftColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+}
+
+.header {
+    position: relative;
+    display: block;
+}
+
+.header h2 {
+    font-family: var(--font-h2);
+    /* Caveat Brush */
+    font-size: 4rem;
+    color: var(--color-white);
+    margin: 0;
+    line-height: 1.1;
+    max-width: 450px;
+}
+
+.accentSpan {
+    color: var(--color-span-accent);
+    /* #0259D */
+}
+
+.stars {
+    position: absolute;
+    right: 20px;
+    top: -20px;
+    width: 45px;
+    height: auto;
+    /* Small doodle stars beside the title (right side) */
+}
+
+.bodyText p {
+    font-family: var(--font-body);
+    /* Quicksand */
+    font-size: 1.1rem;
+    color: var(--color-white);
+    max-width: 480px;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+/* Video Card */
+.videoCard {
+    width: 100%;
+    max-width: 480px;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    background: #000;
+    margin-top: 0.5rem;
+}
+
+/* Right Column - Collage */
+.rightColumn {
+    position: relative;
+    height: 100%;
+    min-height: 500px;
+    /* Ensure space for collage */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.collageContainer {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    height: 500px;
+    /* Defined height for absolute positioning context */
+}
+
+.collageImg1,
+.collageImg2,
+.collageImg3 {
+    position: absolute;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    /* Border? Design doesn't explicitly say border, but "overlap slightly with drop shadows". */
+}
+
+/* Rectangular Top-Left */
+.collageImg1 {
+    width: 55%;
+    height: 45%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* Top-Right */
+.collageImg2 {
+    width: 50%;
+    height: 50%;
+    /* Taller? */
+    top: 40px;
+    right: 0;
+    z-index: 2;
+}
+
+/* Bottom Centered-ish */
+.collageImg3 {
+    width: 60%;
+    height: 50%;
+    bottom: 0;
+    left: 15%;
+    z-index: 3;
+}
+
+/* Buttons - Bottom Center of Panel */
+.buttonRow {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.btnOutline {
+    background: transparent;
+    border: 2px solid var(--color-white);
+    color: var(--color-white);
+    padding: 0.8rem 2.5rem;
+    font-family: var(--font-body);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btnOutline:hover {
+    background: var(--color-white);
+    color: var(--color-coral);
+}
+
+.btnFill {
+    background: var(--color-cta-blue);
+    /* #84AFFB */
+    border: 2px solid var(--color-cta-blue);
+    color: var(--color-white);
+    padding: 0.8rem 2.5rem;
+    font-family: var(--font-body);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btnFill:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(132, 175, 251, 0.4);
+}
+
+/* --- RESPONSIVE --- */
+
+@media (max-width: 1200px) {
+    .coralPanel {
+        padding: 4rem;
+        gap: 2rem;
+    }
+}
+
+/* Tablet Portrait */
+@media (max-width: 1024px) {
+    .coralPanel {
+        padding: 3rem 2rem;
+    }
+
+    .rightColumn {
+        min-height: 400px;
+    }
+
+    .collageContainer {
+        height: 400px;
+    }
+}
+
+/* Mobile: max-width 768px */
+@media (max-width: 768px) {
+    .aboutSection {
+        padding: 4rem 1rem;
+    }
+
+    .coralPanel {
+        grid-template-columns: 1fr;
+        padding: 2.5rem 1.5rem;
+        gap: 3rem;
+        width: 100vw;
+        /* "Coral panel becomes full-width" */
+        max-width: 100%;
+        margin: 0 -1rem;
+        /* Offset parent padding if width 100% logic requires */
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .leftColumn {
+        align-items: center;
+        text-align: center;
+    }
+
+    .header h2 {
+        font-size: 2.8rem;
+        max-width: 100%;
+    }
+
+    .stars {
+        right: 0;
+        top: -25px;
+    }
+
+    .bodyText p {
+        text-align: center;
+    }
+
+    /* Collage stacks under text */
+    .rightColumn {
+        min-height: 300px;
+        order: 2;
+    }
+
+    .collageContainer {
+        height: 300px;
+        max-width: 320px;
+    }
+
+    /* Buttons stack vertically */
+    .buttonRow {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 1rem;
+        order: 3;
+    }
+
+    .btnOutline,
+    .btnFill {
+        width: 100%;
+        max-width: 300px;
+    }
+}
