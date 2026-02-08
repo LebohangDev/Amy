@@ -109,6 +109,12 @@
     align-items: center;
     gap: 0.4rem;
     z-index: 10;
+    transition: all 0.2s ease;
+}
+
+.nav_contact:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
 }
 
 .portfolioBtn {

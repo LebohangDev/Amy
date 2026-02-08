@@ -1,6 +1,6 @@
 .heroSection {
     width: 100%;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     position: relative;
     overflow: hidden;
     padding-top: 6rem;
@@ -23,10 +23,22 @@
 .socials {
     display: flex;
     gap: 1.5rem;
+    transition: all 0.2s ease;
+}
+
+.socials:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
 }
 
 .socials a {
     text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.socials a:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
 }
 
 .socials i {
@@ -48,7 +60,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 5vh;
+    /* padding-bottom: 5vh; */
+    padding: 0;
+    margin-bottom: 0;
+    height: auto;
 }
 
 .visualLayer {
@@ -61,9 +76,9 @@
 
 .imageWrapper {
     position: relative;
-    width: 52vw;
-    max-width: 780px;
-    min-width: 520px;
+    /* width: 52vw; */
+    max-width: 1054px;
+    /* min-width: 520px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -72,7 +87,7 @@
 
 .cutoutImage {
     width: 100%;
-    height: auto;
+    /* height: 620px; */
     object-fit: contain;
     filter: drop-shadow(0 18px 40px rgba(0, 0, 0, 0.3));
 }
@@ -191,8 +206,10 @@
     }
 
     .visualLayer {
-        margin-top: 2vh;
+        /* margin-top: 2vh; */
         flex-direction: column;
+        padding: 0;
+        margin: 0;
     }
 
     /* STACK ORDER: LEFT TEXT → IMAGE → RIGHT TEXT */
@@ -200,11 +217,11 @@
         position: relative;
         width: 100%;
         height: auto;
-        margin-top: 1.5rem;
+        margin-top: 2rem;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 1.4rem;
+        /* gap: 1.4rem; */
         text-align: center;
     }
 
@@ -223,12 +240,17 @@
         order: 1;
     }
 
-    .imageWrapper {
+    /* .imageWrapper {
         order: 2;
         width: 85vw;
-        max-width: 430px;
+        max-width: 230px;
         min-width: 0;
         margin-top: 0.5rem;
+    } */
+
+    .cutoutImage {
+        width: 500px;
+        height: auto;
     }
 
     .textBlockRight {
@@ -242,7 +264,7 @@
     }
 
     .stampWrapper {
-        top: 0.5rem;
+        top: 0.01rem;
         right: 1.5rem;
         transform: scale(0.7);
     }
