@@ -1,8 +1,5 @@
-/* Nav.module.css */
-
 .navContainer {
     position: absolute;
-    /* Header is absolute over the hero */
     top: 0;
     left: 0;
     width: 100%;
@@ -19,17 +16,16 @@
     display: none;
 }
 
-.navContainer nav {
+.nav {
     width: 100%;
     max-width: 1400px;
     padding: 0 4rem;
-    /* Adequate padding */
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.navContainer nav ul {
+.navInner {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -40,7 +36,6 @@
     position: relative;
 }
 
-/* Zone 1: Logo - Left */
 .nav_logo {
     display: flex;
     align-items: center;
@@ -51,13 +46,11 @@
 
 .nav_logo img {
     height: 3.5rem;
-    /* Small "af" script logo */
     width: auto;
 }
 
 .logoText {
     font-family: var(--font-h1);
-    /* Playfair Display */
     font-size: 1.1rem;
     color: var(--color-white);
     text-transform: uppercase;
@@ -66,7 +59,6 @@
     line-height: 1;
 }
 
-/* Zone 2: Navigation Links - Center */
 .nav_links {
     display: flex;
     align-items: center;
@@ -77,14 +69,9 @@
     margin: 0;
 }
 
-.nav_links li {
-    padding: 0;
-}
-
 .nav_links li a {
     text-decoration: none;
     font-family: var(--font-body);
-    /* Quicksand */
     font-size: 0.85rem;
     text-transform: uppercase;
     font-weight: 600;
@@ -97,27 +84,38 @@
     color: var(--color-coral);
 }
 
-.nav_links li.active a {
+.active a {
     color: var(--color-coral);
-    /* Active link appears coral */
 }
 
-/* Zone 3: Contact - Right */
+.nav_links li.active a {
+    color: var(--color-coral);
+    position: relative;
+}
+
+.nav_links li.active a::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--color-coral);
+    border-radius: 2px;
+}
+
 .nav_contact {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.4rem;
     z-index: 10;
 }
 
 .portfolioBtn {
     text-decoration: none;
     background-color: var(--color-coral);
-    /* Coral background */
     color: var(--color-white);
-    /* White text */
     padding: 0.7rem 2rem;
-    /* Pill shape */
     font-size: 0.9rem;
     font-family: var(--font-body);
     letter-spacing: 0.05em;
@@ -133,7 +131,6 @@
     filter: brightness(1.1);
 }
 
-/* Small circular icon button */
 .iconBtn {
     width: 2.5rem;
     height: 2.5rem;
@@ -157,7 +154,6 @@
     filter: brightness(1.1);
 }
 
-/* Responsive - Mobile Menu */
 .hamburgerContainer {
     display: none;
 }
@@ -167,16 +163,14 @@
         gap: 2rem;
     }
 
-    .navContainer nav {
+    .nav {
         padding: 0 2rem;
     }
 }
 
-/* Mobile Breakpoint: 768px */
 @media (max-width: 767px) {
     .navContainer {
         display: none;
-        /* Hide desktop nav */
     }
 
     .hamburgerContainer {
@@ -188,9 +182,6 @@
         top: 0;
         z-index: 1000;
         background-color: transparent;
-        /* Assuming transparent initially or logic handles it */
-        /* If we want a solid bar on mobile we can add bg here, but design implies overlay. 
-           Lets keep it clean. */
     }
 
     .hamHeader {
@@ -209,22 +200,14 @@
         height: auto;
         cursor: pointer;
         filter: invert(1);
-        /* Ensure white icon on dark bg/overlay */
     }
 
-    /* Mobile Menu Active State */
     .hamMenuActive {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100vh;
-        background-color: var(--color-coral);
-        /* Coral background for mobile menu? Or match brand? 
-                                              "About" has Coral panel. Let's make mobile menu Coral too 
-                                              for "premium" feel or Dark. User didn't specify, but Coral is primary.
-                                              Let's stick to brand color or white. Sticky header usually implies solid.
-                                              Let's use a solid dark or coral. I'll pick Coral #FF6648. */
         background-color: var(--color-coral);
         z-index: 2000;
         display: flex;
@@ -233,19 +216,18 @@
         gap: 2rem;
     }
 
-    .hamMenuActive .close {
+    .close {
         align-self: flex-end;
     }
 
-    .hamMenuActive .closeIcon {
+    .closeIcon {
         width: 30px;
         height: 30px;
         cursor: pointer;
         filter: brightness(0) invert(1);
-        /* White */
     }
 
-    .hamMenuActive ul {
+    .hamLinks {
         list-style: none;
         padding: 0;
         margin: 0;
@@ -256,16 +238,29 @@
         align-items: center;
     }
 
-    .hamMenuActive ul li a {
+    .hamLinks li {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .hamLinks li i {
+        font-size: 2.5rem;
+        /* match text size */
+        color: var(--color-white);
+        line-height: 1;
+    }
+
+    .hamLinks li a {
         font-family: var(--font-h1);
-        /* Playfair for big menu items */
         font-size: 2.5rem;
         color: var(--color-white);
         text-decoration: none;
         text-transform: uppercase;
+        line-height: 1;
     }
 
-    .hamMenuActive .media {
+    .media {
         margin-top: auto;
         display: flex;
         flex-direction: column;
@@ -273,7 +268,7 @@
         gap: 1rem;
     }
 
-    .hamMenuActive .media h1 {
+    .media h1 {
         font-family: var(--font-body);
         font-size: 1rem;
         letter-spacing: 2px;
@@ -282,14 +277,19 @@
         text-transform: uppercase;
     }
 
-    .hamMenuActive .media .socials {
+    .socials {
         display: flex;
         gap: 1.5rem;
     }
 
-    .hamMenuActive .media .socials i {
+    .socials a {
+        text-decoration: none;
+    }
+
+    .socials i {
         font-size: 1.8rem;
         color: var(--color-white);
+        text-decoration: none;
     }
 
     .copyright p {
