@@ -13,7 +13,7 @@ const Footer = () => {
                         <p>Media</p>
                         <div className={styles.socialIcons}>
                             <motion.a
-                                href="https://www.instagram.com/dianaray_vlogs/"
+                                href="https://www.instagram.com/amyjeanfox/"
                                 target="_blank"
                                 rel="noreferrer"
                                 whileHover={{ scale: 1.15, y: -3 }}
@@ -22,7 +22,7 @@ const Footer = () => {
                                 <i class="ri-instagram-fill"></i>
                             </motion.a>
                             <motion.a
-                                href="https://www.tiktok.com/@busyavocado"
+                                href="https://www.tiktok.com/@amyjeanfox"
                                 target="_blank"
                                 rel="noreferrer"
                                 whileHover={{ scale: 1.15, y: -3 }}
@@ -31,7 +31,7 @@ const Footer = () => {
                                 <i class="ri-tiktok-line"></i>
                             </motion.a>
                             <motion.a
-                                href="https://www.youtube.com/@busyavocado"
+                                href="https://www.youtube.com/@amyfox"
                                 target="_blank"
                                 rel="noreferrer"
                                 whileHover={{ scale: 1.15, y: -3 }}
@@ -45,7 +45,7 @@ const Footer = () => {
                         <ul>
                             <li><a href="#Home">Home</a></li>
                             <li><a href="#About">About</a></li>
-                            <li><a href="#Product">Product</a></li>
+                            <li><a href="#Product">Ebook</a></li>
                             <li><a href="#Benefits">Benefits</a></li>
                         </ul>
                     </div>

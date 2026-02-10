@@ -30,21 +30,21 @@ const Home = () => {
       >
         <div className={styles.socials}>
           <a
-            href="https://www.instagram.com/busyavocado/"
+            href="https://www.instagram.com/amyjeanfox/"
             target="_blank"
             rel="noreferrer"
           >
             <i className="ri-instagram-fill"></i>
           </a>
           <a
-            href="https://www.tiktok.com/@busyavocado"
+            href="https://www.tiktok.com/@amyjeanfox"
             target="_blank"
             rel="noreferrer"
           >
             <i className="ri-tiktok-line"></i>
           </a>
           <a
-            href="https://www.youtube.com/@busyavocado"
+            href="https://www.youtube.com/@amyfox"
             target="_blank"
             rel="noreferrer"
           >

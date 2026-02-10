@@ -75,10 +75,10 @@ const Nav = ({ activeNav, setActiveNav, containerRef }) => {
                     href="#Product"
                     onClick={(e) => {
                       e.preventDefault();
-                      handleNavClick("/product", "Product");
+                      handleNavClick("/ebook", "Product");
                     }}
                   >
-                    Product
+                    Ebook
                   </a>
                 </li>
 
@@ -97,7 +97,7 @@ const Nav = ({ activeNav, setActiveNav, containerRef }) => {
 
               <div className={styles.nav_contact}>
                 <a
-                  href="https://www.instagram.com/busyavocado/"
+                  href="https://www.instagram.com/amyjeanfox/"
                   target="_blank"
                   rel="noreferrer"
                   className={styles.portfolioBtn}
@@ -106,7 +106,7 @@ const Nav = ({ activeNav, setActiveNav, containerRef }) => {
                 </a>
 
                 <a
-                  href="https://www.tiktok.com/@busyavocado"
+                  href="https://www.tiktok.com/@amyjeanfox"
                   target="_blank"
                   rel="noreferrer"
                   className={styles.iconBtn}
@@ -186,11 +186,11 @@ const Nav = ({ activeNav, setActiveNav, containerRef }) => {
                     href="#Product"
                     onClick={(e) => {
                       e.preventDefault();
-                      handleNavClick("/product", "Product");
+                      handleNavClick("/ebook", "Product");
                       setHamMenu(false);
                     }}
                   >
-                    Product
+                    Ebook
                   </a>
                 </li>
 
@@ -214,7 +214,7 @@ const Nav = ({ activeNav, setActiveNav, containerRef }) => {
 
                 <div className={styles.socials}>
                   <a
-                    href="https://www.instagram.com/busyavocado/"
+                    href="https://www.instagram.com/amyjeanfox/"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -222,7 +222,7 @@ const Nav = ({ activeNav, setActiveNav, containerRef }) => {
                   </a>
 
                   <a
-                    href="https://www.tiktok.com/@busyavocado"
+                    href="https://www.tiktok.com/@amyjeanfox"
                     target="_blank"
                     rel="noreferrer"
                   >

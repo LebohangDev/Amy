@@ -30,7 +30,7 @@ function AppContent() {
       '/': 'Home',
       '/home': 'Home',
       '/about': 'About',
-      '/product': 'Product',
+      '/ebook': 'Product',
       '/benefits': 'Benefits',
     };
 

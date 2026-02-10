@@ -94,7 +94,7 @@ const About = () => {
               className={styles.btnFill}
               whileHover={{ y: -4 }}
               transition={{ duration: 0.2 }}
-              onClick={() => navigate("/product")}
+              onClick={() => navigate("/ebook")}
             >
               Start Reading
             </motion.button>
