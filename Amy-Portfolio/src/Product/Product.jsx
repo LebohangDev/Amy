@@ -116,7 +116,7 @@ const Product = () => {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <img src="Images/Ebook/Amy_Lee_Ebook_Cover.png" alt="Ebook Cover" />
+            <img src="Images/Ebook/Amy_Fox_Ebook_Cover.png" alt="Ebook Cover" />
           </motion.div>
 
 
