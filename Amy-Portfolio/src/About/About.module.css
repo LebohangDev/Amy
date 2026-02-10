@@ -54,7 +54,7 @@
 }
 
 .accentSpan {
-    color: var(--color-span-accent);
+    color: #0259D0;
     font-family: var(--font-h2);
     /* #0259D */
 }
@@ -176,7 +176,7 @@
 }
 
 .btnFill {
-    background: #063659;
+    background: #0259D0;
     /* #84AFFB */
     /* border: 2px solid var(--color-cta-blue); */
     border: none;

@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import { floatingVariant1, floatingVariant2, floatingVariant3 } from "../utils/animations";
 import styles from "./About.module.css";
 
 const About = () => {
+  const navigate = useNavigate();
+
   return (
     <section id="About" className={styles.aboutSection}>
       <div className={styles.coralPanel}>
@@ -82,6 +85,7 @@ const About = () => {
               className={styles.btnOutline}
               whileHover={{ y: -4 }}
               transition={{ duration: 0.2 }}
+              onClick={() => navigate("/benefits")}
             >
               Learn More
             </motion.button>
@@ -90,6 +94,7 @@ const About = () => {
               className={styles.btnFill}
               whileHover={{ y: -4 }}
               transition={{ duration: 0.2 }}
+              onClick={() => navigate("/product")}
             >
               Start Reading
             </motion.button>

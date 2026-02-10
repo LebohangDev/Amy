@@ -31,7 +31,7 @@ function AppContent() {
       '/home': 'Home',
       '/about': 'About',
       '/product': 'Product',
-      '/benefits': 'Product',
+      '/benefits': 'Benefits',
     };
 
     const currentPath = location.pathname;

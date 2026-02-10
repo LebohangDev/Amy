@@ -51,6 +51,7 @@ body {
   font-family: var(--font-body);
   /* Global Background Image on Body/Wrapper */
   background-image: url('/Images/background.jpg');
+  background-color: #0259D0;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

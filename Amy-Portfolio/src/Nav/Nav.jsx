@@ -87,7 +87,7 @@ const Nav = ({ activeNav, setActiveNav, containerRef }) => {
                     href="#Benefits"
                     onClick={(e) => {
                       e.preventDefault();
-                      handleNavClick("/product", "Benefits");
+                      handleNavClick("/benefits", "Benefits");
                     }}
                   >
                     Benefits
@@ -200,7 +200,7 @@ const Nav = ({ activeNav, setActiveNav, containerRef }) => {
                     href="#Benefits"
                     onClick={(e) => {
                       e.preventDefault();
-                      handleNavClick("/product", "Benefits");
+                      handleNavClick("/benefits", "Benefits");
                       setHamMenu(false);
                     }}
                   >

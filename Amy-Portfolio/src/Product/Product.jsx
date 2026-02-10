@@ -176,7 +176,7 @@ const Product = () => {
       </div>
 
       {/* WHAT YOU'LL FIND INSIDE SECTION */}
-      <div className={styles.insideContainer}>
+      <div id="Benefits" className={styles.insideContainer}>
         <div className={styles.insideHeader}>
 
           <h1>What You'll <span>Find Inside</span></h1>
@@ -209,7 +209,7 @@ const Product = () => {
       </div>
 
       {/* BENEFITS SECTION */}
-      <div id="Benefits" ref={benefitsRef} className={styles.benefitsContainer}>
+      <div ref={benefitsRef} className={styles.benefitsContainer}>
         <div className={styles.benefitsWrapper}>
           {/* LEFT SIDE */}
           <div className={styles.benefitsLeft}>
