@@ -43,7 +43,6 @@ const Nav = ({ activeNav, setActiveNav, containerRef }) => {
             <ul className={styles.navInner}>
               <div className={styles.nav_logo}>
                 <img src="Images/Logos/nav_logo.svg" alt="Logo" />
-                <span className={styles.logoText}>AMY FOX</span>
               </div>
 
               <div className={styles.nav_links}>

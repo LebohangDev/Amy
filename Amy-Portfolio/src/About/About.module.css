@@ -2,8 +2,9 @@
 
 .aboutSection {
     width: 100%;
-    min-height: 100vh;
-    padding: 6rem 1rem;
+    width: 100%;
+
+    padding: 0rem 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,7 +19,7 @@
     padding: 5rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 1rem;
     position: relative;
     /* Plain rectangle per "It’s a rectangle card/panel" */
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
@@ -35,28 +36,35 @@
 .header {
     position: relative;
     display: block;
+
 }
 
 .header h2 {
-    font-family: var(--font-h2);
+    font-family: var(--font-body);
+    position: relative;
+    z-index: 2;
     /* Caveat Brush */
-    font-size: 4rem;
+    font-size: 3.5rem;
+    font-weight: 500;
     color: var(--color-white);
     margin: 0;
     line-height: 1.1;
-    max-width: 450px;
+    max-width: 660px;
+
 }
 
 .accentSpan {
     color: var(--color-span-accent);
+    font-family: var(--font-h2);
     /* #0259D */
 }
 
 .stars {
     position: absolute;
-    right: 20px;
-    top: -20px;
-    width: 45px;
+    left: 82%;
+    top: 50%;
+    width: 75px;
+    z-index: 0;
     height: auto;
     /* Small doodle stars beside the title (right side) */
 }
@@ -94,48 +102,49 @@
     align-items: center;
 }
 
-.collageContainer {
+.imgContainer {
     position: relative;
     width: 100%;
-    max-width: 500px;
-    height: 500px;
-    /* Defined height for absolute positioning context */
+    height: 100%;
+    max-width: 600px;
+    min-height: 500px;
+    /* Limit overlap area */
 }
 
-.collageImg1,
-.collageImg2,
-.collageImg3 {
+.imgContainer img {
     position: absolute;
     object-fit: cover;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-    /* Border? Design doesn't explicitly say border, but "overlap slightly with drop shadows". */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 0;
 }
 
-/* Rectangular Top-Left */
-.collageImg1 {
+
+.imgContainer img:nth-child(1) {
     width: 55%;
-    height: 45%;
+    height: auto;
+    aspect-ratio: 3/4;
     top: 0;
     left: 0;
     z-index: 1;
 }
 
-/* Top-Right */
-.collageImg2 {
+
+.imgContainer img:nth-child(2) {
     width: 50%;
-    height: 50%;
-    /* Taller? */
-    top: 40px;
+    height: auto;
+    aspect-ratio: 3/4;
+    top: 8%;
     right: 0;
     z-index: 2;
 }
 
-/* Bottom Centered-ish */
-.collageImg3 {
+
+.imgContainer img:nth-child(3) {
     width: 60%;
-    height: 50%;
-    bottom: 0;
-    left: 15%;
+    height: auto;
+    aspect-ratio: 4/5;
+    bottom: 10%;
+    left: 10%;
     z-index: 3;
 }
 
@@ -188,33 +197,87 @@
 
 /* --- RESPONSIVE --- */
 
-@media (max-width: 1200px) {
+/* Tablet Portrait & Landscape */
+@media (min-width: 768px) and (max-width: 1280px) {
     .coralPanel {
-        padding: 4rem;
+        padding: 3.5rem 2.5rem;
         gap: 2rem;
+        max-width: 95%;
     }
-}
 
-/* Tablet Portrait */
-@media (max-width: 1024px) {
-    .coralPanel {
-        padding: 3rem 2rem;
+    .header h2 {
+        font-size: 2.2rem;
+        /* Smaller for 2 lines */
+        max-width: 400px;
+    }
+
+    .bodyText p {
+        font-size: 1rem;
+        max-width: 100%;
     }
 
     .rightColumn {
         min-height: 400px;
     }
 
+
+
+    .imgContainer {
+        max-width: 420px;
+
+        margin-top: 14rem;
+    }
+
+    .btnOutline,
+    .btnFill {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.8rem;
+        /* Smaller text for single line */
+        white-space: nowrap;
+    }
+
+    .imgContainer img:nth-child(3) {
+
+        bottom: 40%;
+
+
+    }
+
+    .stars {
+        width: 70px;
+        left: 85%;
+    }
+}
+
+/* iPad Pro Specific Landscape */
+@media (min-width: 1025px) and (max-width: 1366px) {
+    .coralPanel {
+        padding: 4.5rem;
+        max-width: 1200px;
+    }
+
+    .header h2 {
+        font-size: 2.8rem;
+    }
+
+    .stars {
+        width: 80px;
+        left: 75%;
+    }
+
+    .bodyText p {
+        font-size: 1.1rem;
+    }
+
     .collageContainer {
-        height: 400px;
+        height: 500px;
+        max-width: 500px;
     }
 }
 
 /* Mobile: max-width 768px */
-@media (max-width: 768px) {
-    .aboutSection {
-        padding: 4rem 1rem;
-    }
+@media (max-width: 767px) {
+
 
     .coralPanel {
         grid-template-columns: 1fr;
@@ -239,9 +302,13 @@
         max-width: 100%;
     }
 
+    .accentSpan {
+        font-size: 3rem;
+    }
+
     .stars {
-        right: 0;
-        top: -25px;
+        position: sticky;
+        left: 80px;
     }
 
     .bodyText p {

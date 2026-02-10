@@ -1,8 +1,25 @@
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { fadeIn, fadeInUp, scrollFadeIn } from "../utils/animations";
 import styles from "./Home.module.css";
 
 const Home = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 767);
+    };
+
+    // Check on mount
+    checkMobile();
+
+    // Add event listener for window resize
+    window.addEventListener("resize", checkMobile);
+
+    // Cleanup
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
   return (
     <section id="Home" className={styles.heroSection}>
       <motion.div
@@ -55,7 +72,7 @@ const Home = () => {
         >
           <motion.div className={styles.imageWrapper} variants={fadeInUp}>
             <img
-              src="Images/Hero/Hero_1.svg"
+              src={isMobile ? "Images/Hero/Hero_mobile.png" : "Images/Hero/Hero_1.svg"}
               alt="Amy Fox"
               className={styles.cutoutImage}
             />

@@ -102,8 +102,9 @@ input {
 .app {
   /* Removed bg image from here as it's on body now, or keep if wrapper needs it */
   color: var(--text-body);
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: minmax(100%, 1fr);
+  grid-template-rows: 1rem auto;
   /* Stack structure instead of grid for full widths */
 
   width: 100vw;
@@ -115,19 +116,24 @@ input {
 
 
 .app .header {
-  position: absolute;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 100;
+  height: 5rem;
+  z-index: 10000;
+  grid-row: 1 / 2;
+
 }
 
 .app .main {
   width: 100%;
+  grid-row: 2 / 3;
 }
 
 .app .footer {
   width: 100%;
+  grid-row: 3 / 4;
 }
 
 

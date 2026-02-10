@@ -35,6 +35,30 @@ const Product = () => {
     },
   ];
 
+  const insideItems = [
+    {
+      title: "A grounded reframe of strength during motherhood",
+      icon: "ri-heart-pulse-line",
+    },
+    {
+      title: "Why inconsistency, fatigue, and limited time aren't failures",
+      icon: "ri-time-line",
+    },
+    {
+      title: "How to train without guilt or pressure",
+      icon: "ri-mental-health-line",
+    },
+    {
+      title: "A sustainable approach to movement, recovery, and mindset",
+      icon: "ri-refresh-line",
+    },
+    {
+      title: "Strength that supports the life you're living now",
+      icon: "ri-parent-line",
+    },
+  ];
+
+
   const [email, setEmail] = useState("");
   const [isEmailValid, setIsEmailValid] = useState(false);
 
@@ -83,69 +107,104 @@ const Product = () => {
   return (
     <div id="Product" className={styles.ProductContainer}>
       <div className={styles.productSection}>
-        {/* LEFT IMAGE */}
+        <div className={styles.productWrapper}>
+          {/* LEFT IMAGE */}
+          <motion.div
+            className={styles.productLeft}
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <img src="Images/Ebook/Amy_Lee_Ebook_Cover.png" alt="Ebook Cover" />
+          </motion.div>
+
+
+          <motion.div
+            className={styles.productRight}
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <div className={styles.starsContainer}>
+              <img src="Images/Stars/stars_1.svg" alt="" />
+            </div>
+
+            <div className={styles.title}>
+              <h2>Built</h2>
+              <h1>While</h1>
+              <h1>Raising</h1>
+            </div>
+
+            <div className={styles.tag}>
+              <h2>EBOOK</h2>
+            </div>
+
+            <div className={styles.productDescription}>
+              <p>Fitness & Real Life Guide for Moms</p>
+            </div>
+
+            <div className={styles.emailInput}>
+              <input
+                type="email"
+                placeholder="Enter your email"
+                value={email}
+                onChange={handleEmailChange}
+              />
+              <button
+                disabled={!isEmailValid}
+                onClick={() => handleCheckout(product[0])}
+              >
+                Get Started Now
+              </button>
+            </div>
+
+            <div className={styles.priceRow}>
+              <div className={styles.price}>
+                <h1>Price</h1>
+                <p>10$</p>
+              </div>
+
+              <div className={styles.why} onClick={scrollToBenefits}>
+                <h1>Why buy this ebook?</h1>
+                <i className="ri-arrow-down-circle-line"></i>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* WHAT YOU'LL FIND INSIDE SECTION */}
+      <div className={styles.insideContainer}>
+        <div className={styles.insideHeader}>
+
+          <h1>What You'll <span>Find Inside</span></h1>
+
+        </div>
         <motion.div
-          className={styles.productLeft}
-          variants={fadeInUp}
+          className={styles.insideGrid}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
+          variants={{
+            visible: {
+              transition: {
+                staggerChildren: 0.1,
+              },
+            },
+          }}
         >
-          <img src="Images/Ebook/Amy_Lee_Ebook_Cover.png" alt="Ebook Cover" />
-        </motion.div>
-
-        {/* RIGHT CONTENT */}
-        <motion.div
-          className={styles.productRight}
-          variants={fadeInUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          <div className={styles.starsContainer}>
-            <img src="Images/Stars/stars_1.svg" alt="" />
-          </div>
-
-          <div className={styles.title}>
-            <h2>Built</h2>
-            <h1>While</h1>
-            <h1>Raising</h1>
-          </div>
-
-          <div className={styles.tag}>
-            <h2>EBOOK</h2>
-          </div>
-
-          <div className={styles.productDescription}>
-            <p>Fitness & Real Life Guide for Moms</p>
-          </div>
-
-          <div className={styles.emailInput}>
-            <input
-              type="email"
-              placeholder="Enter your email"
-              value={email}
-              onChange={handleEmailChange}
-            />
-            <button
-              disabled={!isEmailValid}
-              onClick={() => handleCheckout(product[0])}
+          {insideItems.map((item, index) => (
+            <motion.div
+              key={index}
+              className={styles.insideGridItem}
+              variants={fadeInUp}
             >
-              Get Started Now
-            </button>
-          </div>
-
-          <div className={styles.priceRow}>
-            <div className={styles.price}>
-              <h1>Price</h1>
-              <p>10$</p>
-            </div>
-
-            <div className={styles.why} onClick={scrollToBenefits}>
-              <h1>Why buy this ebook?</h1>
-              <i className="ri-arrow-down-circle-line"></i>
-            </div>
-          </div>
+              <i className={item.icon}></i>
+              <p>{item.title}</p>
+            </motion.div>
+          ))}
         </motion.div>
       </div>
 
@@ -154,11 +213,15 @@ const Product = () => {
         <div className={styles.benefitsWrapper}>
           {/* LEFT SIDE */}
           <div className={styles.benefitsLeft}>
-            <h2>What to expect?</h2>
+            <h2>Why This Ebook Works</h2>
             <p>
-              Helping you embrace your body, feel strong, and build healthy
-              habits that align with your life as a new mom. Navigating the
-              beautiful journey of motherhood with a clear and confident path.
+              Because it meets mothers where they actually are.
+            </p>
+            <p>
+              Instead of demanding consistency, perfection, or intensity, Built While Raising reframes strength as something that adapts with motherhood — not something you have to squeeze in or sacrifice for.
+            </p>
+            <p>
+              This isn't about reclaiming an old body. It's about building a capable, resilient one that supports your life now.
             </p>
 
             <div className={styles.bookStack}>

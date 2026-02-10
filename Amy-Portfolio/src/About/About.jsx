@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { floatingVariant1, floatingVariant2, floatingVariant3 } from "../utils/animations";
 import styles from "./About.module.css";
 
 const About = () => {
@@ -25,7 +26,7 @@ const About = () => {
             </motion.h2>
 
             <motion.img
-              src="Images/Stars/Stars_2.png"
+              src="Images/Stars/stars_2.svg"
               alt=""
               className={styles.stars}
               initial={{ opacity: 0, rotate: -15 }}
@@ -43,11 +44,10 @@ const About = () => {
             viewport={{ once: true }}
           >
             <p>
-              Born and raised in South Africa, now based in Dubai, I speak to
-              those navigating the journey of personal growth, where fitness,
-              family, and self-discovery intersect. Through a foundation of
-              strength, mindfulness, and family values, I guide you to elevate
-              your standards.
+              Built While Raising is an honest guide to building strength during motherhood — not before, not after, but in the middle of real life.
+            </p>
+            <p>
+              Created for mothers who train in the margins of their day, this ebook reframes strength as something that grows alongside fatigue, responsibility, and presence — not at the expense of them.
             </p>
           </motion.div>
 
@@ -70,6 +70,30 @@ const About = () => {
               allowFullScreen
             ></iframe>
           </motion.div>
+          {/* Buttons */}
+          <motion.div
+            className={styles.buttonRow}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true }}
+          >
+            <motion.button
+              className={styles.btnOutline}
+              whileHover={{ y: -4 }}
+              transition={{ duration: 0.2 }}
+            >
+              Learn More
+            </motion.button>
+
+            <motion.button
+              className={styles.btnFill}
+              whileHover={{ y: -4 }}
+              transition={{ duration: 0.2 }}
+            >
+              Start Reading
+            </motion.button>
+          </motion.div>
         </motion.div>
 
         {/* Right Content - Collage */}
@@ -80,63 +104,40 @@ const About = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          <div className={styles.collageContainer}>
+          <div className={styles.imgContainer}>
             <motion.img
-              src="Images/Amy/Amy_1.jpg"
+              src="Images/Amy/Amy_1.jpeg"
               alt="Amy 1"
-              className={styles.collageImg1}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              variants={floatingVariant1}
+              animate="animate"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              viewport={{ once: true }}
             />
 
             <motion.img
-              src="Images/Amy/Amy_2.jpg"
+              src="Images/Amy/Amy_2.jpeg"
               alt="Amy 2"
-              className={styles.collageImg2}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              variants={floatingVariant2}
+              animate="animate"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              viewport={{ once: true }}
             />
 
             <motion.img
-              src="Images/Amy/Amy_3.jpg"
+              src="Images/Amy/Amy_3.jpeg"
               alt="Amy 3"
-              className={styles.collageImg3}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              variants={floatingVariant3}
+              animate="animate"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.7, delay: 0.3 }}
-              viewport={{ once: true }}
             />
           </div>
         </motion.div>
 
-        {/* Buttons */}
-        <motion.div
-          className={styles.buttonRow}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
-        >
-          <motion.button
-            className={styles.btnOutline}
-            whileHover={{ y: -4 }}
-            transition={{ duration: 0.2 }}
-          >
-            Learn More
-          </motion.button>
 
-          <motion.button
-            className={styles.btnFill}
-            whileHover={{ y: -4 }}
-            transition={{ duration: 0.2 }}
-          >
-            BUY PRODUCT
-          </motion.button>
-        </motion.div>
       </div>
     </section>
   );
