@@ -68,7 +68,7 @@ const Product = () => {
       title: "Food for Real Life",
       description:
         "Busy Avocado is about enjoying good food without overcomplicating it.",
-      price: 10,
+      price: 27,
       currency: "usd",
       image: "Images/Ebook/Amy_Lee_Ebook_Cover.png",
       email: email,
@@ -142,28 +142,33 @@ const Product = () => {
             </div>
 
             <div className={styles.productDescription}>
-              <p>Fitness & Real Life Guide for Moms</p>
+              <p className={styles.productMainText}>Strength that grows alongside motherhood, not in perfect conditions, but in real life.</p>
+              <p className={styles.productSubDescription}>
+                This is not a program built around uninterrupted sleep, quiet mornings, or unlimited time. It’s a grounded approach to training in the middle of motherhood, when energy is inconsistent, time is limited, and life is full.
+              </p>
             </div>
 
             <div className={styles.emailInput}>
+
               <input
                 type="email"
                 placeholder="Enter your email"
                 value={email}
                 onChange={handleEmailChange}
               />
+              <p className={styles.emailLabel}>Enter the email address where you’d like your ebook sent, We’ll only use your email to send your ebook.</p>
               <button
                 disabled={!isEmailValid}
                 onClick={() => handleCheckout(product[0])}
               >
-                Get Started Now
+                Download Ebook
               </button>
             </div>
 
             <div className={styles.priceRow}>
               <div className={styles.price}>
                 <h1>Price</h1>
-                <p>10$</p>
+                <p>$27</p>
               </div>
 
               <div className={styles.why} onClick={scrollToBenefits}>

@@ -24,8 +24,7 @@ const About = () => {
               transition={{ duration: 0.7, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              My <span className={styles.accentSpan}>Journey</span> of growth
-              through the years
+              Strength doesn’t <span className={styles.accentSpan}>grow</span> in perfect conditions.
             </motion.h2>
 
             <motion.img
@@ -47,32 +46,16 @@ const About = () => {
             viewport={{ once: true }}
           >
             <p>
-              Built While Raising is an honest guide to building strength during motherhood — not before, not after, but in the middle of real life.
+              There was a time when I believed strength depended on structure — consistent schedules, uninterrupted sessions, and energy I could rely on. I built my body through discipline, repetition, and pushing when things felt hard. And for a while, that worked.
             </p>
             <p>
-              Created for mothers who train in the margins of their day, this ebook reframes strength as something that grows alongside fatigue, responsibility, and presence — not at the expense of them.
+              Then motherhood arrived, and everything changed. Sleep became unpredictable. Time became fragmented. Energy rose and fell without warning. I could no longer train the way I used to — and for a while, I thought that meant I had lost something.
+            </p>
+            <p>
+              But what I eventually realised is this: strength doesn’t disappear when conditions change. It adapts. It becomes quieter. More sustainable. Less about perfection and more about return. That shift reshaped the way I train, the way I coach, and the way I understand what strength really means in motherhood.
             </p>
           </motion.div>
 
-          {/* Video Embed Card */}
-          <motion.div
-            className={styles.videoCard}
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            viewport={{ once: true }}
-          >
-            <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube.com/embed/TyERlOFMAQY?si=LcZitBi_YV2tqhOq"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-            ></iframe>
-          </motion.div>
           {/* Buttons */}
           <motion.div
             className={styles.buttonRow}
@@ -96,7 +79,7 @@ const About = () => {
               transition={{ duration: 0.2 }}
               onClick={() => navigate("/ebook")}
             >
-              Start Reading
+              Download the Ebook
             </motion.button>
           </motion.div>
         </motion.div>

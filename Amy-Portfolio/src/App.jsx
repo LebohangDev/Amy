@@ -3,6 +3,7 @@ import { useState, useRef, useEffect } from 'react';
 import { BrowserRouter, useLocation, useNavigate } from 'react-router-dom';
 import Home from './Home/Home';
 import About from './About/About';
+import MeetAmy from './MeetAmy/MeetAmy';
 import Product from './Product/Product';
 import Nav from './Nav/Nav';
 import Footer from './Footer/Footer';
@@ -31,6 +32,7 @@ function AppContent() {
       '/home': 'Home',
       '/about': 'About',
       '/ebook': 'Product',
+      '/meetamy': 'MeetAmy',
       '/benefits': 'Benefits',
     };
 
@@ -66,6 +68,9 @@ function AppContent() {
         </div>
         <div className={activeNav === 'About' ? 'about active' : 'about'}>
           <About />
+        </div>
+        <div className={activeNav === 'MeetAmy' ? 'meetamy active' : 'meetamy'}>
+          <MeetAmy />
         </div>
         <div className={activeNav === 'Product' ? 'product active' : 'product'}>
           <Product />

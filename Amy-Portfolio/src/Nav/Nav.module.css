@@ -74,12 +74,15 @@
 .nav_links li a {
     text-decoration: none;
     font-family: var(--font-body);
-    font-size: 0.85rem;
+    font-size: clamp(0.7rem, 0.9vw, 0.9rem);
+    /* Fluid sizing */
     text-transform: uppercase;
     font-weight: 600;
     color: var(--color-white);
     letter-spacing: 0.15em;
     transition: color 0.3s ease;
+    white-space: nowrap;
+    /* Prevent wrapping */
 }
 
 .nav_links li a:hover {
@@ -168,11 +171,16 @@
 
 @media (max-width: 1024px) {
     .nav_links {
-        gap: 2rem;
+        gap: 1rem;
     }
 
     .nav {
         padding: 0 2rem;
+    }
+
+    .portfolioBtn {
+        padding: 0.5rem 1.5rem;
+        font-size: 0.7rem;
     }
 }
 
@@ -261,11 +269,14 @@
 
     .hamLinks li a {
         font-family: var(--font-h1);
-        font-size: 2.5rem;
+        font-size: clamp(1.8rem, 5vw, 2.8rem);
+        /* Fluid sizing for mobile menu */
         color: var(--color-white);
         text-decoration: none;
         text-transform: uppercase;
         line-height: 1;
+        white-space: nowrap;
+        /* Prevent wrapping */
     }
 
     .media {

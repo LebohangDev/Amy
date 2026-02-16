@@ -1,5 +1,7 @@
 // Framer Motion Animation Variants
 
+import { delay } from "framer-motion";
+
 // ========================================
 // FADE ANIMATIONS
 // ========================================
@@ -8,7 +10,25 @@ export const fadeIn = {
     hidden: { opacity: 0 },
     visible: {
         opacity: 1,
-        transition: { duration: 0.6, ease: "easeOut" }
+        transition: { duration: 1.0, ease: "easeOut" }
+    }
+};
+
+export const fadeInScroll = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: { duration: 2.0, delay: 1, ease: "easeOut" }
+    }
+};
+export const arrowInfinite = {
+    animate: {
+        y: [0, -5, 0],
+        transition: {
+            duration: 1,
+            repeat: Infinity,
+            ease: "easeInOut"
+        }
     }
 };
 
@@ -17,7 +37,7 @@ export const fadeInUp = {
     visible: {
         opacity: 1,
         y: 0,
-        transition: { duration: 0.6, ease: "easeOut" }
+        transition: { duration: 1.0, ease: "easeOut" }
     }
 };
 
@@ -26,8 +46,24 @@ export const fadeInDown = {
     visible: {
         opacity: 1,
         y: 0,
-        transition: { duration: 0.6, ease: "easeOut" }
+        transition: { duration: 1.0, ease: "easeOut" }
     }
+};
+
+// ...
+
+export const scrollFadeIn = {
+    initial: { opacity: 0, y: 30 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true, amount: 0.4 },
+    transition: { duration: 1.0, ease: "easeOut" }
+};
+
+export const scrollScale = {
+    initial: { opacity: 0, scale: 0.9 },
+    whileInView: { opacity: 1, scale: 1 },
+    viewport: { once: true, amount: 0.4 },
+    transition: { duration: 1.0, ease: "easeOut" }
 };
 
 // ========================================
@@ -39,7 +75,7 @@ export const scaleIn = {
     visible: {
         opacity: 1,
         scale: 1,
-        transition: { duration: 0.5, ease: "easeOut" }
+        transition: { duration: 1.0, ease: "easeOut" }
     }
 };
 
@@ -63,7 +99,7 @@ export const staggerItem = {
     visible: {
         opacity: 1,
         y: 0,
-        transition: { duration: 0.5 }
+        transition: { duration: 1.0 }
     }
 };
 
@@ -133,12 +169,16 @@ export const imageHover = {
 // SLIDE ANIMATIONS
 // ========================================
 
+// ========================================
+// SLIDE ANIMATIONS
+// ========================================
+
 export const slideInLeft = {
     hidden: { opacity: 0, x: -50 },
     visible: {
         opacity: 1,
         x: 0,
-        transition: { duration: 0.6, ease: "easeOut" }
+        transition: { duration: 1.0, ease: "easeOut" }
     }
 };
 
@@ -147,7 +187,7 @@ export const slideInRight = {
     visible: {
         opacity: 1,
         x: 0,
-        transition: { duration: 0.6, ease: "easeOut" }
+        transition: { duration: 1.0, ease: "easeOut" }
     }
 };
 
@@ -155,23 +195,12 @@ export const slideInRight = {
 // SCROLL-TRIGGERED ANIMATIONS
 // ========================================
 
-export const scrollFadeIn = {
-    initial: { opacity: 0, y: 30 },
-    whileInView: { opacity: 1, y: 0 },
-    viewport: { once: true, amount: 0.3 },
-    transition: { duration: 0.6, ease: "easeOut" }
-};
-
-export const scrollScale = {
-    initial: { opacity: 0, scale: 0.9 },
-    whileInView: { opacity: 1, scale: 1 },
-    viewport: { once: true, amount: 0.3 },
-    transition: { duration: 0.7, ease: "easeOut" }
-};
+// (Removed duplicates)
 
 // ========================================
 // NAV BAR ANIMATIONS
 // ========================================
+
 
 export const navbarSlide = {
     hidden: { y: -100, opacity: 0 },

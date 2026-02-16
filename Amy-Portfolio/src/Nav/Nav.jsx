@@ -66,7 +66,19 @@ const Nav = ({ activeNav, setActiveNav, containerRef }) => {
                       handleNavClick("/about", "About");
                     }}
                   >
-                    About
+                    The Approach
+                  </a>
+                </li>
+
+                <li className={activeNav === "MeetAmy" ? styles.active : ""}>
+                  <a
+                    href="#MeetAmy"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleNavClick("/meetamy", "MeetAmy");
+                    }}
+                  >
+                    Meet Amy
                   </a>
                 </li>
 
@@ -78,40 +90,17 @@ const Nav = ({ activeNav, setActiveNav, containerRef }) => {
                       handleNavClick("/ebook", "Product");
                     }}
                   >
-                    Ebook
-                  </a>
-                </li>
-
-                <li className={activeNav === "Benefits" ? styles.active : ""}>
-                  <a
-                    href="#Benefits"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      handleNavClick("/benefits", "Benefits");
-                    }}
-                  >
-                    Benefits
+                    Built While Raising
                   </a>
                 </li>
               </div>
 
               <div className={styles.nav_contact}>
                 <a
-                  href="https://www.instagram.com/amyjeanfox/"
-                  target="_blank"
-                  rel="noreferrer"
+                  href="#Product"
                   className={styles.portfolioBtn}
                 >
-                  Contact
-                </a>
-
-                <a
-                  href="https://www.tiktok.com/@amyjeanfox"
-                  target="_blank"
-                  rel="noreferrer"
-                  className={styles.iconBtn}
-                >
-                  <i className="ri-arrow-right-up-line"></i>
+                  Download Ebook
                 </a>
               </div>
             </ul>
@@ -176,7 +165,21 @@ const Nav = ({ activeNav, setActiveNav, containerRef }) => {
                       setHamMenu(false);
                     }}
                   >
-                    About
+                    The Approach
+                  </a>
+                </li>
+
+                <li className={activeNav === "MeetAmy" ? styles.active : ""}>
+                  <i className="ri-star-line"></i>
+                  <a
+                    href="#MeetAmy"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleNavClick("/meetamy", "MeetAmy");
+                      setHamMenu(false);
+                    }}
+                  >
+                    Meet Amy
                   </a>
                 </li>
 
@@ -190,21 +193,7 @@ const Nav = ({ activeNav, setActiveNav, containerRef }) => {
                       setHamMenu(false);
                     }}
                   >
-                    Ebook
-                  </a>
-                </li>
-
-                <li>
-                  <i className="ri-star-line"></i>
-                  <a
-                    href="#Benefits"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      handleNavClick("/benefits", "Benefits");
-                      setHamMenu(false);
-                    }}
-                  >
-                    Benefits
+                    Built While Raising
                   </a>
                 </li>
               </ul>

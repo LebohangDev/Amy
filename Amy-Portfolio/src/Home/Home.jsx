@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { fadeIn, fadeInUp, scrollFadeIn } from "../utils/animations";
+import { fadeIn, fadeInUp, scrollFadeIn, fadeInScroll, arrowInfinite } from "../utils/animations";
 import styles from "./Home.module.css";
 
 const Home = () => {
@@ -11,13 +11,13 @@ const Home = () => {
       setIsMobile(window.innerWidth <= 767);
     };
 
-    // Check on mount
+
     checkMobile();
 
-    // Add event listener for window resize
+
     window.addEventListener("resize", checkMobile);
 
-    // Cleanup
+
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
   return (
@@ -56,11 +56,10 @@ const Home = () => {
       <div className={styles.heroContent}>
         <motion.div className={styles.textLayer} {...scrollFadeIn}>
           <div className={styles.textBlockLeft}>
-            <p>
-              blends <span className={styles.highlight}>fitness</span> with
-              family, empowering others to{" "}
-              <span className={styles.highlight}>build strength</span>
-            </p>
+            <h2 className={styles.heroSubheading}>
+              <span className={styles.highlight}>Motherhood</span> changed your body. It doesn’t have to end your <span className={styles.highlight}>strength</span>.
+            </h2>
+
           </div>
         </motion.div>
 
@@ -72,19 +71,22 @@ const Home = () => {
         >
           <motion.div className={styles.imageWrapper} variants={fadeInUp}>
             <img
-              src={isMobile ? "Images/Hero/Hero_mobile.png" : "Images/Hero/Hero_1.svg"}
+              src={isMobile ? "Images/Hero/Hero_mobile.png" : "Images/Hero/Hero_1.png"}
               alt="Amy Fox"
               className={styles.cutoutImage}
             />
+          </motion.div>
+          <motion.div className={styles.scrollMore} variants={fadeInScroll}>
+            <p>Scroll More</p>
+            <motion.i className="ri-arrow-down-s-line" variants={arrowInfinite} animate="animate"></motion.i>
           </motion.div>
         </motion.div>
 
         <motion.div className={styles.textLayer} {...scrollFadeIn}>
           <div className={styles.textBlockRight}>
-            <p>
-              while cherishing the support of{" "}
-              <span className={styles.highlight}>loved ones...</span>
-            </p>
+            <h2 className={styles.heroSubheading}>
+              For mothers who want to feel <span className={styles.highlight}>capable</span> in their bodies, without sacrificing presence, energy, or <span className={styles.highlight}>sanity</span>.
+            </h2>
           </div>
         </motion.div>
 

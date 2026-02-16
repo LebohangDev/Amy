@@ -44,7 +44,7 @@
     position: relative;
     z-index: 2;
     /* Caveat Brush */
-    font-size: 3.5rem;
+    font-size: 3.2rem;
     font-weight: 500;
     color: var(--color-white);
     margin: 0;
@@ -56,13 +56,14 @@
 .accentSpan {
     color: #0259D0;
     font-family: var(--font-h2);
+    font-size: 4rem;
     /* #0259D */
 }
 
 .stars {
     position: absolute;
-    left: 82%;
-    top: 50%;
+    left: 78%;
+    top: 60%;
     width: 75px;
     z-index: 0;
     height: auto;
@@ -177,8 +178,6 @@
 
 .btnFill {
     background: #0259D0;
-    /* #84AFFB */
-    /* border: 2px solid var(--color-cta-blue); */
     border: none;
     color: var(--color-white);
     padding: 0.8rem 2.5rem;
@@ -195,9 +194,7 @@
     box-shadow: 0 5px 15px rgba(132, 175, 251, 0.4);
 }
 
-/* --- RESPONSIVE --- */
 
-/* Tablet Portrait & Landscape */
 @media (min-width: 768px) and (max-width: 1280px) {
     .coralPanel {
         padding: 3.5rem 2.5rem;
@@ -208,7 +205,7 @@
     .header h2 {
         font-size: 2.2rem;
         /* Smaller for 2 lines */
-        max-width: 400px;
+        max-width: 500px;
     }
 
     .bodyText p {
@@ -246,6 +243,106 @@
     .stars {
         width: 70px;
         left: 85%;
+    }
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1280px) and (orientation: portrait) {
+    .coralPanel {
+        grid-template-columns: 1fr;
+        padding: 2.5rem 1.5rem;
+        gap: 1rem;
+        width: 100vw;
+        /* "Coral panel becomes full-width" */
+        max-width: 100%;
+        margin: 0 -1rem;
+        /* Offset parent padding if width 100% logic requires */
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .leftColumn {
+        align-items: center;
+        text-align: center;
+    }
+
+    .header h2 {
+        font-size: 3rem;
+        max-width: 100%;
+    }
+
+    .accentSpan {
+        font-size: 4rem;
+    }
+
+    .stars {
+        position: absolute;
+
+        left: 68%;
+    }
+
+    .bodyText p {
+        text-align: center;
+    }
+
+    /* Collage stacks under text */
+    .rightColumn {
+        min-height: 300px;
+        order: 2;
+
+
+    }
+
+    .collageContainer {
+        height: 300px;
+        max-width: 320px;
+
+    }
+
+    /* Buttons stack vertically */
+    .buttonRow {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 1rem;
+        order: 3;
+    }
+
+    .btnOutline,
+    .btnFill {
+        width: 100%;
+        max-width: 700px;
+    }
+
+
+    .imgContainer img:nth-child(1) {
+        width: 85%;
+        height: auto;
+        aspect-ratio: 3/4;
+        top: -10%;
+        left: 0%;
+        z-index: 1;
+    }
+
+
+    .imgContainer img:nth-child(2) {
+        width: 85%;
+        height: auto;
+        aspect-ratio: 3/4;
+        top: 8%;
+        right: -25%;
+        z-index: 2;
+    }
+
+
+    .imgContainer img:nth-child(3) {
+        width: 85%;
+        height: auto;
+        aspect-ratio: 4/5;
+        bottom: 10%;
+        left: -30%;
+        z-index: 3;
     }
 }
 
