@@ -65,15 +65,15 @@ const Product = () => {
   const product = [
     {
       type: "ebook",
-      title: "Food for Real Life",
+      title: "Built While Raisin  g",
       description:
-        "Busy Avocado is about enjoying good food without overcomplicating it.",
+        "Strength that grows alongside motherhood, not in perfect conditions, but in real life.",
       price: 27,
       currency: "usd",
-      image: "Images/Ebook/Amy_Lee_Ebook_Cover.png",
+      image: "Images/Ebook/Built_While_Raising_Cover.png", // update if needed
       email: email,
-      successUrl: "https://busyavocado.com/?payment=success",
-      cancelUrl: "https://busyavocado.com/?payment=cancel",
+      successUrl: "https://amyjeanfox.com/?payment=success",
+      cancelUrl: "https://amyjeanfox.com/?payment=cancel",
     },
   ];
 
@@ -86,21 +86,43 @@ const Product = () => {
     setIsEmailValid(validateEmail(val));
   };
 
-  async function handleCheckout(productPayload) {
-    try {
-      const res = await fetch(
-        "https://dianabackend.onrender.com/api/create-checkout-session",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(productPayload),
-        },
-      );
+  const productInfo = {
+    title: "Built While Raising",
+    amount: 27,
+    successUrl: "https://amyjeanfox.com/?payment=success",
+    cancelUrl: "https://amyjeanfox.com/?payment=cancel",
+  };
 
-      const data = await res.json();
-      window.location.href = data.url;
+  async function handleZinnaPayment(bookPayload) {
+    try {
+      const paidBook = {
+        amount: bookPayload.amount,
+        title: bookPayload.title,
+        email: email,
+        successUrl: bookPayload.successUrl,
+        cancelUrl: bookPayload.cancelUrl,
+      }
+      console.log(paidBook);
+
+      const res = await fetch('https://amybackend.onrender.com/api/create-payment-intent', {
+        method: 'POST',
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(paidBook),
+      });
+      console.log(paidBook);
+
+      const data = await res.json()
+      console.log("data:", data);
+
+      if (data.redirect_url) {
+        window.location.href = data.redirect_url;
+        console.log("redirect url:", data.redirect_url)
+      } else {
+        console.error("No redirect_url found in response", data);
+      }
+
     } catch (e) {
-      console.error("Payment session failed:", e);
+      console.error("failed to send request to create payment session for user:", e)
     }
   }
 
@@ -159,7 +181,7 @@ const Product = () => {
               <p className={styles.emailLabel}>Enter the email address where you’d like your ebook sent, We’ll only use your email to send your ebook.</p>
               <button
                 disabled={!isEmailValid}
-                onClick={() => handleCheckout(product[0])}
+                onClick={() => handleZinnaPayment(productInfo)}
               >
                 Download Ebook
               </button>
