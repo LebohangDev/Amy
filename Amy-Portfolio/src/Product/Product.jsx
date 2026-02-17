@@ -68,7 +68,7 @@ const Product = () => {
       title: "Built While Raisin  g",
       description:
         "Strength that grows alongside motherhood, not in perfect conditions, but in real life.",
-      price: 27,
+      price: 2,
       currency: "usd",
       image: "Images/Ebook/Built_While_Raising_Cover.png", // update if needed
       email: email,
