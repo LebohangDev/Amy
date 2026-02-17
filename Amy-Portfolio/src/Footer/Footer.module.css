@@ -154,3 +154,35 @@
         align-items: center;
     }
 }
+
+
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .footerContent {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .brandLogo {
+        justify-self: center;
+        width: 100px;
+        height: 100px;
+    }
+
+    .media {
+        justify-self: center;
+    }
+
+    .footerNav {
+        justify-self: center;
+    }
+
+    .footerNav ul {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+    }
+
+}

@@ -557,94 +557,62 @@
     margin-top: 0.3rem;
 }
 
-/* RESPONSIVE */
-@media (min-width: 1025px) and (max-width: 1366px) {
+/* Landscape Tablets */
+@media (min-width: 769px) and (max-width: 1366px) and (orientation: landscape) {
     .productWrapper {
-        flex-direction: row;
-        text-align: left;
+        align-items: flex-start;
 
-        padding: 6rem 3rem;
-        gap: 2rem;
-        max-width: 100%;
-    }
-
-
-
-    .productLeft {
-        flex: 1.2;
-        display: flex;
-        justify-content: center;
-    }
-
-    .productRight {
-        flex: 0.8;
-        text-align: center;
-        align-items: center;
-        position: relative;
-    }
-
-    .productLeft img {
-        width: 100%;
-        max-width: 700px;
-    }
-
-
-
-    .starsContainer {
-        right: 65%;
-        top: -10px;
-        z-index: 1;
-    }
-
-    .starsContainer img {
-        width: 140px;
-    }
-
-    .title h1 {
-        font-size: 5.5rem;
     }
 
     .title h2 {
-        font-size: 4rem;
-    }
-
-    .productDescription p {
-        font-size: 1.8rem;
-    }
-
-    .benefitsWrapper {
-        flex-direction: row;
-        /* Keep desktop row layout */
-        max-width: 100%;
-
-        gap: 3rem;
-        display: flex;
-    }
-
-    .benefitsLeft,
-    .benefitsGrid {
-        width: 50%;
-    }
-
-    .benefitsLeft h2 {
-        font-size: 3.8rem;
-    }
-}
-
-/* Specific iPad Pro (Full Width Content) */
-@media (min-width: 1024px) and (min-height: 1024px) {
-
-    .productWrapper,
-    .benefitsWrapper {
-        padding: 8rem 5rem;
+        font-size: 3.5rem;
     }
 
     .title h1 {
-        font-size: 6.5rem;
+        font-size: 4.5rem;
     }
+
+    .starsContainer img {
+        max-width: 120px;
+    }
+
+    .tag h2 {
+        font-size: 1.5rem;
+    }
+
+    .productMainText {
+        font-size: 1.4rem;
+    }
+
+    .productSubDescription {
+        font-size: 1rem;
+    }
+
+    .emailInput input {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+
+    .emailInput button {
+        font-size: 0.7rem;
+    }
+
+    .emailLabel {
+        font-size: 0.7rem;
+    }
+
+    .why h1 {
+        font-size: 0.9rem;
+    }
+
+    .why i {
+        font-size: 1.2rem;
+    }
+
+
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
 
     .productWrapper {
         padding: 4rem 1.5rem;
@@ -668,62 +636,6 @@
         font-size: 3rem;
     }
 
-    /* Tablet Portrait Specific */
-    @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-        .productWrapper {
-            padding: 2rem;
-        }
-
-        .productLeft img {
-            max-width: 400px;
-            /* Adjust as cleanly as possible */
-        }
-
-        .title h2 {
-            font-size: 4.5rem;
-        }
-
-        .title h1 {
-            font-size: 6rem;
-        }
-
-        .productMainText {
-            font-size: 2rem;
-            max-width: 600px;
-        }
-
-        .productSubDescription {
-            font-size: 1.3rem !important;
-            max-width: 600px;
-        }
-
-        .benefitsWrapper {
-            gap: 4rem;
-        }
-
-        .benefitsLeft h2 {
-            font-size: 4rem;
-        }
-
-        .benefitsLeft p {
-            font-size: 1.4rem;
-            max-width: 600px;
-        }
-
-        .benefitItem {
-            max-width: 600px;
-            flex-direction: row;
-            text-align: left;
-        }
-
-        .benefitItem .description h1 {
-            font-size: 1.6rem;
-        }
-
-        .benefitItem .description p {
-            font-size: 1.2rem;
-        }
-    }
 
     .title h1 {
         font-size: 4rem;
@@ -737,10 +649,9 @@
     }
 
     .productSubDescription {
-        font-size: 1rem !important;
-        /* Ensure sub description is readable but smaller */
-        font-weight: 400 !important;
-        margin-top: 1rem !important;
+        font-size: 1rem;
+        font-weight: 400;
+        margin-top: 1rem;
     }
 
     .emailLabel,
@@ -751,18 +662,22 @@
     }
 
     .starsContainer {
-        right: 60%;
-        top: 0;
+        right: 64%;
+        top: -2%;
         z-index: 1;
     }
 
     .starsContainer img {
 
-        max-width: 150px;
+        max-width: 100px;
     }
 
     .insideHeader h1 {
         font-size: 2.5rem;
+    }
+
+    .insideHeader {
+        margin-bottom: 0;
     }
 
     .insideHeader hr {
@@ -831,4 +746,183 @@
     .pictureBox {
         margin: 0 auto;
     }
+}
+
+
+
+/* Tablet Portrait Specific */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .productWrapper {
+        padding: 2rem;
+        align-items: center;
+    }
+
+    .productLeft img {
+        max-width: 400px;
+        /* Adjust as cleanly as possible */
+    }
+
+    .starsContainer {
+        right: 66%;
+
+
+    }
+
+    .starsContainer img {
+        max-width: 100px;
+    }
+
+    .title h2 {
+        font-size: 3rem;
+    }
+
+    .title h1 {
+        font-size: 4rem;
+    }
+
+    .tag h2 {
+        font-size: 1rem;
+    }
+
+    .productMainText {
+        font-size: 1.2rem;
+        max-width: 600px;
+    }
+
+    .productSubDescription {
+        font-size: 1rem;
+
+    }
+
+    .emailInput input {
+        font-size: 0.95rem;
+        padding: 0.7rem;
+    }
+
+    .emailInput button {
+        font-size: 0.7rem;
+    }
+
+    .emailInput p {
+        font-size: 0.7rem;
+    }
+
+    .why h1 {
+        font-size: 0.8rem;
+    }
+
+    .why i {
+        font-size: 1rem;
+    }
+
+    .price h1 {
+        font-size: 1rem;
+    }
+
+    .price p {
+        font-size: 2.5rem;
+    }
+
+    .benefitsWrapper {
+        gap: 4rem;
+        grid-template-columns: 1fr;
+        display: grid;
+    }
+
+    .benefitsLeft h2 {
+        font-size: 4rem;
+    }
+
+    .insideGrid {
+        max-width: 90%;
+        align-items: center;
+    }
+
+    .insideHeader {
+        margin-bottom: 2rem;
+    }
+
+    .insideHeader h1 {
+        font-size: 2rem;
+    }
+
+    .insideHeader span {
+        font-size: 2rem;
+    }
+
+    .insideGridItem {
+        padding: 2rem 1.5rem;
+    }
+
+    .insideGridItem p {
+        font-size: 1rem;
+    }
+
+    .insideGridItem i {
+        font-size: 2rem;
+    }
+
+    .benefitsLeft p {
+        font-size: 1.4rem;
+        max-width: 600px;
+    }
+
+    .benefitItem {
+        max-width: 600px;
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .benefitItem .description h1 {
+        font-size: 1.6rem;
+    }
+
+    .benefitItem .description p {
+        font-size: 1.2rem;
+    }
+}
+
+
+
+/*ipad pro responsivnes potrait */
+
+@media (min-width: 834px) and (max-width: 1193px) and (orientation: portrait) {
+
+    .benefitsWrapper {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+
+    .benefitsLeft {
+        align-items: center;
+    }
+
+
+    .benefitsLeft h2 {
+        font-size: 3rem;
+    }
+
+    .benefitsLeft p {
+        font-size: 1.1rem;
+    }
+
+    .benefitsGrid {
+        align-items: center;
+    }
+
+    .benefitItem {
+        max-width: 600px;
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .benefitItem .description h1 {
+        font-size: 1.4rem;
+    }
+
+    .benefitItem .description p {
+        font-size: 1.1rem;
+    }
+
+
 }

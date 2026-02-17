@@ -200,7 +200,7 @@
 }
 
 
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
     .container {
 
         gap: 4rem;
@@ -228,15 +228,15 @@
     }
 
     .heading {
-        font-size: 4.5rem;
+        font-size: 4rem;
     }
 
     .subHeading {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
     }
 
     .bodyText p {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         text-align: center;
     }
 
@@ -249,7 +249,7 @@
     }
 
     .quoteBlock p {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
     }
 
     .visualContent {
@@ -266,18 +266,24 @@
     }
 
     .qualHeading {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
         text-align: center;
     }
 
     .qualList li {
-        font-size: 1.2rem;
+        font-size: 1rem;
+        text-align: left;
     }
 }
 
 @media (max-width: 768px) {
     .meetAmySection {
         padding: 4rem 1.5rem;
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
     }
 
     .heading {
@@ -297,4 +303,94 @@
     .quoteBlock p {
         font-size: 1.2rem;
     }
+
+    .tabletImageWrapper {
+        display: block;
+    }
+
+    .imageWrapper {
+        display: none;
+    }
+}
+
+
+
+
+/*ipad pro responsivnes potrait */
+
+@media (min-width: 834px) and (max-width: 1193px) and (orientation: portrait) {
+
+    .container {
+        gap: 4rem;
+        max-width: 95%;
+        margin: 0 auto;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .container>.imageWrapper {
+        display: block;
+    }
+
+
+
+    /* Show the interleaved image */
+    .tabletImageWrapper {
+        display: none;
+
+    }
+
+    .textContent {
+        align-items: center;
+        text-align: center;
+    }
+
+    .heading {
+        font-size: 3rem;
+    }
+
+    .subHeading {
+        font-size: 1.5rem;
+    }
+
+    .bodyText p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .quoteBlock {
+        border-left: none;
+        border-top: 4px solid var(--color-coral);
+        padding-left: 0;
+        padding-top: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .quoteBlock p {
+        font-size: 1.2rem;
+    }
+
+    .visualContent {
+        max-width: 600px;
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 3rem;
+    }
+
+    .qualificationsCard {
+        padding: 3rem;
+    }
+
+    .qualHeading {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .qualList li {
+        font-size: 1rem;
+        text-align: left;
+    }
+
+
 }

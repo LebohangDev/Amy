@@ -251,7 +251,7 @@
         flex-direction: column;
         gap: 2rem;
         margin-top: 1rem;
-        align-items: center;
+        align-items: left;
     }
 
     .hamLinks li {
@@ -317,4 +317,28 @@
         color: rgba(255, 255, 255, 0.8);
         text-align: center;
     }
+}
+
+
+
+
+@media (min-width: 834px) and (max-width: 1193px) and (orientation: portrait) {
+
+    .nav_links {
+        gap: 2rem;
+    }
+
+    .nav_links li a {
+        font-size: 0.7rem;
+    }
+
+    .nav {
+        padding: 0 2rem;
+    }
+
+    .portfolioBtn {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.8rem;
+    }
+
 }

@@ -233,16 +233,38 @@
         white-space: nowrap;
     }
 
+    .imgContainer img:nth-child(1) {
+        width: 60%;
+        height: auto;
+        aspect-ratio: 3/4;
+        top: -10%;
+        left: 15%;
+        z-index: 1;
+    }
+
+
+    .imgContainer img:nth-child(2) {
+        width: 60%;
+        height: auto;
+        aspect-ratio: 3/4;
+        top: 8%;
+        right: -4%;
+        z-index: 2;
+    }
+
+
     .imgContainer img:nth-child(3) {
-
-        bottom: 40%;
-
-
+        width: 60%;
+        height: auto;
+        aspect-ratio: 4/5;
+        bottom: 25%;
+        left: 0%;
+        z-index: 3;
     }
 
     .stars {
         width: 70px;
-        left: 85%;
+        left: 75%;
     }
 }
 
@@ -317,31 +339,31 @@
 
 
     .imgContainer img:nth-child(1) {
-        width: 85%;
+        width: 70%;
         height: auto;
         aspect-ratio: 3/4;
         top: -10%;
-        left: 0%;
+        left: 15%;
         z-index: 1;
     }
 
 
     .imgContainer img:nth-child(2) {
-        width: 85%;
+        width: 70%;
         height: auto;
         aspect-ratio: 3/4;
         top: 8%;
-        right: -25%;
+        right: -24%;
         z-index: 2;
     }
 
 
     .imgContainer img:nth-child(3) {
-        width: 85%;
+        width: 70%;
         height: auto;
         aspect-ratio: 4/5;
-        bottom: 10%;
-        left: -30%;
+        bottom: 14%;
+        left: -10%;
         z-index: 3;
     }
 }
@@ -395,7 +417,7 @@
     }
 
     .header h2 {
-        font-size: 2.8rem;
+        font-size: 2rem;
         max-width: 100%;
     }
 
@@ -406,6 +428,8 @@
     .stars {
         position: sticky;
         left: 80px;
+        width: 65px;
+
     }
 
     .bodyText p {
@@ -437,4 +461,66 @@
         width: 100%;
         max-width: 300px;
     }
+}
+
+
+
+/*ipad pro responsivnes potrait */
+
+@media (min-width: 834px) and (max-width: 1193px) and (orientation: portrait) {
+    .coralPanel {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+    }
+
+    .header h2 {
+        font-size: 2.5rem;
+        text-align: left;
+    }
+
+    .accentSpan {
+        font-size: 3.5rem;
+    }
+
+    .bodyText p {
+        text-align: left;
+        font-size: 1rem;
+    }
+
+    .stars {
+        position: absolute;
+
+        left: 72%;
+    }
+
+    .imgContainer img:nth-child(1) {
+        width: 60%;
+        height: auto;
+        aspect-ratio: 3/4;
+        top: -10%;
+        left: 0%;
+        z-index: 1;
+    }
+
+
+    .imgContainer img:nth-child(2) {
+        width: 60%;
+        height: auto;
+        aspect-ratio: 3/4;
+        top: 8%;
+        right: 0%;
+        z-index: 2;
+    }
+
+
+    .imgContainer img:nth-child(3) {
+        width: 60%;
+        height: auto;
+        aspect-ratio: 4/5;
+        bottom: 25%;
+        left: -10%;
+        z-index: 3;
+    }
+
+
 }
