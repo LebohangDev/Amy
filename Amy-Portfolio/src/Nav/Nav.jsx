@@ -217,6 +217,14 @@ const Nav = ({ activeNav, setActiveNav, containerRef }) => {
                   >
                     <i className="ri-tiktok-line"></i>
                   </a>
+
+                  <a
+                    href="https://www.youtube.com/@amyfox"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <i className="ri-youtube-fill"></i>
+                  </a>
                 </div>
               </div>
 

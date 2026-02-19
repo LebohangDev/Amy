@@ -12,6 +12,8 @@ const Product = () => {
     }
   };
 
+  /*
+
   const benefitsItems = [
     {
       title: "Strong & Confident ",
@@ -35,6 +37,7 @@ const Product = () => {
     },
   ];
 
+  */
   const insideItems = [
     {
       title: "A grounded reframe of strength during motherhood",
@@ -239,7 +242,13 @@ const Product = () => {
       <div ref={benefitsRef} className={styles.benefitsContainer}>
         <div className={styles.benefitsWrapper}>
           {/* LEFT SIDE */}
-          <div className={styles.benefitsLeft}>
+          <motion.div
+            className={styles.benefitsText}
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
             <h2>Why This Ebook Works</h2>
             <p>
               Because it meets mothers where they actually are.
@@ -251,10 +260,6 @@ const Product = () => {
               This isn't about reclaiming an old body. It's about building a capable, resilient one that supports your life now.
             </p>
 
-            <div className={styles.bookStack}>
-              <img src="Images/Ebook/Ebook.png" alt="Ebook Stack" />
-            </div>
-
             <a href="#Product" className={styles.noUnderline}>
               <motion.button
                 className={styles.orderBtn}
@@ -264,33 +269,19 @@ const Product = () => {
                 Order ebook <i className="ri-shopping-bag-3-line"></i>
               </motion.button>
             </a>
-          </div>
+          </motion.div>
 
-          {/* RIGHT GRID */}
-          <div className={styles.benefitsGrid}>
-            {benefitsItems.map((item, index) => (
-              <motion.div
-                key={index}
-                className={styles.benefitItem}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.6,
-                  ease: "easeOut",
-                  delay: index * 0.1,
-                }}
-                viewport={{ once: true }}
-              >
-                <div className={styles.pictureBox}>
-                  <img src={item.img} alt="" />
-                </div>
-                <div className={styles.description}>
-                  <h1>{item.title}</h1>
-                  <p>{item.description}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+          <motion.div
+            className={styles.benefitsImage}
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            <img src="Images/Ebook/Ebook.png" alt="Ebook Stack" />
+          </motion.div>
+
+
         </div>
       </div>
     </div>

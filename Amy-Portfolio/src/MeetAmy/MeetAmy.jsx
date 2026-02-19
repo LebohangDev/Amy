@@ -33,33 +33,34 @@ const MeetAmy = () => {
 
                     <div className={styles.bodyText}>
                         <p>
-                            For years, I trained hard. I loved pushing my limits, chasing progress, and seeing visible results. Fitness was structure, discipline, and measurable growth. I built my career around that — coaching women, leading group sessions, filming follow-along workouts, and helping clients feel strong in their bodies.
+                            Before becoming a mother, my world revolved around performance. I trained hard. I loved pushing limits. I built visible muscle. I coached women to do the same.
+                        </p>
+
+                        <p>
+                            Fitness was discipline, structure, measurable progress — and I built my career around it.
+                        </p>
+
+                        <p>
+                            I qualified as an NQF Level 5 Personal Trainer in 2015 and have spent over a decade coaching women across one-to-one sessions, group training, and global follow-along platforms. I served as Program Director and HIIT Specialist at LEAN with Lilly, helping design programs used by women worldwide. I later expanded my education into pre and postnatal training — a decision that would soon become deeply personal.
                         </p>
 
                         <p className={styles.highlightText}>Then I became a mother.</p>
 
                         <p>
-                            And everything I thought I knew about strength had to stretch.
+                            And everything I thought I knew about strength was tested — not in theory, but in practice.
                         </p>
 
                         <p>
-                            Sleep became unpredictable. Time became fragmented. Energy shifted daily. I could no longer train the way I used to — and for a while, I believed that meant lowering my standards.
+                            Motherhood didn’t weaken my standards. It refined them. It taught me that resilience matters more than routine. That returning matters more than perfection. That strength built inside real life is the kind that lasts.
                         </p>
 
                         <p>
-                            But what it actually required was redefining them.
+                            Today, I help women build capable, resilient bodies that support their lives — not compete with them.
                         </p>
 
                         <p>
-                            Motherhood didn’t take strength away from me. It reshaped it. It taught me that resilience matters more than routine. That returning matters more than perfection. That strength built inside real life is often stronger than anything created under ideal conditions.
-                        </p>
-
-                        <p>
-                            Today, I help women build capable, resilient bodies that support their lives — not compete with them. Bodies that can carry children, responsibilities, fatigue, and still grow stronger over time.
-                        </p>
-
-                        <p>
-                            And yes, aesthetic results can absolutely follow. But they are no longer the only measure of progress. They become a reflection of consistency built in real life — not perfection built in perfect conditions.
+                            And yes, aesthetic results can absolutely follow.
+                            But now, they’re a reflection of sustainable strength — not the only goal.
                         </p>
 
                         <div className={styles.quoteBlock}>

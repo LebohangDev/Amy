@@ -46,13 +46,46 @@ const About = () => {
             viewport={{ once: true }}
           >
             <p>
-              There was a time when I believed strength depended on structure — consistent schedules, uninterrupted sessions, and energy I could rely on. I built my body through discipline, repetition, and pushing when things felt hard. And for a while, that worked.
+              You were taught that strength requires structure.
+              Consistent schedules. Uninterrupted sessions. Energy you can rely on.
             </p>
             <p>
-              Then motherhood arrived, and everything changed. Sleep became unpredictable. Time became fragmented. Energy rose and fell without warning. I could no longer train the way I used to — and for a while, I thought that meant I had lost something.
+              And for a while, that might have worked.
             </p>
             <p>
-              But what I eventually realised is this: strength doesn’t disappear when conditions change. It adapts. It becomes quieter. More sustainable. Less about perfection and more about return. That shift reshaped the way I train, the way I coach, and the way I understand what strength really means in motherhood.
+              Then motherhood arrived.
+            </p>
+            <p>
+              Sleep became unpredictable.
+              Time became fragmented.
+              Energy rose and fell without warning.
+            </p>
+            <p>
+              And suddenly, the way you used to train didn’t fit anymore.
+            </p>
+            <p>
+              It’s easy to believe that means you’ve lost something.
+              Discipline. Momentum. Progress.
+            </p>
+            <p>
+              But strength doesn’t disappear when conditions change.
+              It adapts.
+            </p>
+            <p>
+              It becomes quieter.
+              More sustainable.
+              Less about perfection — and more about returning.
+            </p>
+            <p>
+              Strength built inside real life often lasts longer than strength built in ideal conditions.
+            </p>
+            <p>
+              This is about learning how to train in the middle of motherhood.
+              Not waiting for it to settle.
+              Not trying to escape it.
+            </p>
+            <p>
+              But building strength within it.
             </p>
           </motion.div>
 
