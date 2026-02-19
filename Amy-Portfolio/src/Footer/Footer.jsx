@@ -53,7 +53,7 @@ const Footer = () => {
 
             </div>
             <hr />
-            <p>© 2026 Amy Fox. All rights reserved. | www.creatorsblueprint.net</p>
+            <p>© {new Date().getFullYear()} Amy Fox. All rights reserved. | www.creatorsblueprint.io</p>
 
 
 

@@ -230,8 +230,8 @@ const Nav = ({ activeNav, setActiveNav, containerRef }) => {
 
               <div className={styles.copyright}>
                 <p>
-                  © 2026 Diana Zavzeatii. All rights reserved. |
-                  www.creatorsblueprint.net
+                  © {new Date().getFullYear()} Amy Fox. All rights reserved. |
+                  www.creatorsblueprint.io
                 </p>
               </div>
             </motion.div>
